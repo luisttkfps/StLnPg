@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <h1>Calculando Bhaskara</h1>
+    <script>
+        let a = Number(prompt('Valor A'))
+        let b = Number(prompt('Valor B'))
+        let c = Number(prompt('Valor C'))
+        let delta = (Math.pow(b, 2) - (4 * a * c) )
+
+        let x1 = (-b - Math.sqrt(delta)) / (2 * a)
+        let x2 = (-b + Math.sqrt(delta)) / (2 * a)
+            document.write(`O valor de x1 é ${x1}<br> O valor de x2 é ${x2}`)
+
+    </script>
+
+</body>
+</html>
