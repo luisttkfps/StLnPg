@@ -8,16 +8,34 @@
 </head>
 <body>
     <h1>Calculando Bhaskara</h1>
+    <p>Exibe o valor dos coeficiente x1 e x2 por meio da fórmula de bhaskara</p>
+
+    <form id="form">
+    <input id="valueA" type="number" placeholder="Digite o valor de A"><br>
+    <input id="valueB" type="number" placeholder="Digite o valor de B"><br>
+    <input id="valueC" type="number" placeholder="Digite o valor de C"><br>
+    <button>Calcular</button><br>
+    </form>
+
+    <div id=result></div>
+    
     <script>
-        let a = Number(prompt('Valor A'))
-        let b = Number(prompt('Valor B'))
-        let c = Number(prompt('Valor C'))
+        function onSubmit(event){
+        event.preventDefault()
+        
+
+        let a = Number(valueA.value)
+        let b = Number(valueB.value)
+        let c = Number(valueC.value)
         let delta = (Math.pow(b, 2) - (4 * a * c) )
 
         let x1 = (-b - Math.sqrt(delta)) / (2 * a)
         let x2 = (-b + Math.sqrt(delta)) / (2 * a)
-            document.write(`O valor de x1 é ${x1}<br> O valor de x2 é ${x2}`)
-
+        result.innerHTML= `
+        O valor de x1 é ${x1}<br>
+        O valor de x2 é ${x2}`
+        }
+        form.addEventListener('submit', onSubmit)
     </script>
 
 </body>
