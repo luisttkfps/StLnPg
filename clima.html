@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link href="base.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>Informe como o clima está hoje.</h1>
+    </header>
+    
+
+
+    <form id="formulario">
+        <input type="text" id="weather" placeholder="Informe o clima">
+        <br><button>Confirmar</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+            function onSubmit(event){
+                event.preventDefault()
+            if (weather.value === 'ensolarado') {
+                resultado.innerHTML = `Hoje é um dia ensolarado, muito bom para ficar deitado com um ventilador virado para você.`;} 
+            else if (weather.value === 'chovendo')
+                {resultado.innerHTML = `Chuva é um ótimo sinal para deitar-se com um chocolate quente, uma pipoca e muitos filmes.`;}
+            else if (weather.value === 'nevando') 
+                {resultado.innerHTML = `Baaah guri, se ta nevando é bom tomá um chimarrão pra aquecê.`;} 
+            else if (weather.value === 'nublado') 
+                {resultado.innerHTMLt = `O dia pode parecer triste e sem cor... mas olhe pelo lado bom, poderia estar ensolarado.`;} 
+            else 
+                {resultado.innerHTML = '';}
+
+            
+        }
+    formulario.addEventListener('submit', onSubmit)
+
+    </script>
+
+
+</body>
+
+</html>
