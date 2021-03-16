@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link href="base.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>Verificador de gênero.</h1>
+    </header>
+    
+
+
+    <form id="formulario">
+        <input type="text" id="gender" placeholder="Informe o genero">
+        <input type="text" id="name" placeholder="Informe seu nome">
+        <br><button>Confirmar</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+            function onSubmit(event){
+                event.preventDefault()
+
+            if (gender.value === 'feminino') {
+                resultado.innerHTML = `Olá ${name.value} , de acordo com as informações seu gênero é feminino.`;} 
+            else if (gender.value === 'masculino'){
+                resultado.innerHTML = `Olá ${name.value} , de acordo com as informações seu gênero é masculino.`;}
+            else 
+                {resultado.innerHTML = '';}
+
+            
+        }
+    formulario.addEventListener('submit', onSubmit)
+
+    </script>
+
+
+</body>
+
+</html>
